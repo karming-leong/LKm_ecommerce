@@ -1,57 +1,20 @@
+import Header from "./Header"
+import ProductCard from "./ProductCard"
+import Navbar from "./Navbar"
 import "./style.css"
 import "./App.css"
+
 import { useState } from "react"
 
 export default function App() {
 
-  const [showNavBar, setShowNavBar] = useState(false);
 
-  const
 
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container">
-          <a className="navbar-brand" href="#">E-Shop</a>
-          {/* hamburger button */}
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            onClick={() => {
-              if (showNavBar){
-                setShowNavBar(false)
-              }else {
-                setShowNavBar(true)
-              }
-              setShowNavBar(!!showNavBar)
-            }}
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className={`collapse navbar-collapse${if showNavBar===true ?"show":""}`} id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Products</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">About</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <h1>Ecommerce</h1>
+      <Navbar />
 
       <header className="bg-primary text-white text-center py-5">
         <div className="container">
